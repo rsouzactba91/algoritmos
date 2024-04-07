@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="modeloBinario.js"></script>
+    <meta charset="UTF-8" />
+    <title>Professor Lucas | 01</title>
+    <style>
+      body {
+        background-color: cornflowerblue;
+        font-family: "Courier New", Courier, monospace;
+        text-align: center;
+      }
+      .box-nav {
+        background-color: gold;
+        padding: 5px;
+        border-radius: 15px;
+      }
+      .box {
+        background: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 15px;
+        border-radius: 15px;
+        color: white;
+      }
+      input {
+        padding: 20px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        font-size: 15px;
+        width: 65%;
+        height: 10px;
+      }
+      button {
+        padding: 10px;
+        border: none;
+        outline: none;
+        width: 50%;
+        background-color: slateblue;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+      button:hover {
+        background-color: cornflowerblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box-nav">
+      <h1>EXERCÍCIO #01</h1>
+      <h2>Disciplina de Algoritmos</h2>
+    </div>
+
+    <div class="box">
+      <p>Leia o valor decimal e converta para binário. Emita um alerta</p>
+      <input type="text" id="num" placeholder="Insira um número decimal" />
+      <br /><br />
+      <button onclick="converterParaBinario()">Enviar</button>
+    </div>
+  </body>  
+</html>
