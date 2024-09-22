@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Prof Roger Bassan | 02</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+
+        }
+        .box-nav{
+            background-color: gold;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline:none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 50%;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-nav">
+        <h1>EXERCÍCIO #01</h1>
+        <h2>Disciplina de Algoritmos</h2>
+    </div>
+    <div class="box">
+        <p>Leia valores A e B. Trocar os valores entre as duas variáveis, a variável A passa a possuir o valor da variável B e a variável B passa a possuir o valor da variável A.</p>
+
+        <input type="text" id='num' placeholder="Digite um valor">
+        <br><br>
+        <input type="text" id='num2' placeholder="Digite outro valor">
+        <br><br>
+        <button onclick="inverter()">Enviar</button>
+    </div>
+
+
+</body>
+    <script>
+  function inverter() {
+    let x = String(document.getElementById("num").value);
+    let y = String(document.getElementById("num2").value);
+
+    if (x !== "" && y !== "") {//se x for diferente de vazio  e y diferente de vazio
+        let inversor = x; // inversor recebe o valor de x
+        x = y; // x recebe o valor de y
+        y = inversor; // recebe o valor da variavel inversor
+        alert("x é igual a :" +" "+ x);
+        alert("y é igual a :" +" "+ y);}
+   
+}
+    </script> 
+    </html>
