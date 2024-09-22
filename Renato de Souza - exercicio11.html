@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Prof Roger Bassan | 02</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+
+        }
+        .box-nav{
+            background-color: gold;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline:none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 50%;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-nav">
+        <h1>EXERCÍCIO #11</h1>
+        <h2>Disciplina de Algoritmos</h2>
+    </div>
+    <div class="box">
+        <p> Escreva um algoritmo em javascript que calcule os gastos com alimentação e transporte de um aluno durante um mês e apresente o resultado total e a média diária. </p>
+        
+        <input type="number" id='alimentacao' placeholder="Digite o gasto diário ">
+        <br><br>     
+        <input type="number" id='transporte' placeholder="Digite o gasto diário ">
+        <br><br> 
+               
+        <button onclick="calculargastomensal()">Calcular</button>
+    </div>
+
+
+</body>
+    <script>
+
+
+function calculargastomensal(){
+
+    let alimentacao = Number(document.getElementById("alimentacao").value)
+     
+    let transporte = Number(document.getElementById("transporte").value)
+
+
+    let total =(alimentacao+transporte)
+ 
+ let media = (alimentacao+transporte)/30
+
+ media = media.toFixed(2)
+
+
+alert("O gasto total é : " + total)
+alert("A média diária é : " + media)
+
+
+
+}
+
+
+        </script> 
+    </html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Prof Roger Bassan | 02</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+
+        }
+        .box-nav{
+            background-color: gold;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline:none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 50%;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-nav">
+        <h1>EXERCÍCIO #19</h1>
+        <h2>Disciplina de Algoritmos</h2>
+    </div>
+    <div class="box">
+        <p>3 - Faça um algoritmo em javascript que ao informar o signo retorne o período correspondente ao signo informado.</p>
+        
+        <input type="text" id='signo' placeholder="Olá, digite seu signo">
+        <br><br> 
+       
+        <button onclick="identificarSigno()">Verificar</button>
+    </div>
+
+
+</body>
+    <script>
+
+    function identificarSigno() {
+        
+     
+    const Signo = document.getElementById("signo").value.toLowerCase();
+  
+switch(Signo){
+case "aries":
+ alert("nascidos entre 21 de março a 20 de abril.")  
+ break
+ case "touro":
+    alert("nascidos entre 21 de abril a 20 de maio.")
+    break
+    case "gemeos":
+        alert("nascidos entre 21 de maio a 20 de junho.")
+        break
+        case "cancer":
+            alert("nascidos entre 21 de junho a 20 de julho.")
+            break
+            case "leao":
+                alert("nascidos entre 23 de julho a 22 de agosto.")
+                break
+                case "virgem":
+                    alert("nascidos entre 23 de agosto a 22 de setembro.")
+                    break
+                    case "libra":
+                        alert("nascidos entre 23 de setembro a 22 de outubro.")
+                        break
+                        case "escorpiao":
+                            alert("nascidos entre 23 de outubro a 21 de novembro.")
+                            break
+                            case "sagitario":
+                                alert("nascidos entre 22 de novembro a 21 de dezembro.")
+                                break
+                                case "capricornio":
+                                    alert("nascidos entre 22 de dezembro a 20 de janeiro.")
+                                    break
+                                    case "aquario":
+                                        alert("nascidos entre 21 de janeiro a 18 de fevereiro.")
+                                        break
+                                        case "peixes":
+                                            alert("nascidos entre 19 de fevereiro a 20 de março.")
+                                            break
+                                                default:
+                                                    alert("Signo inválido.");
+                                            
+                            }
+    }
+        </script> 
+    </html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Prof Roger Bassan | 02</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+
+        }
+        .box-nav{
+            background-color: gold;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline:none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 50%;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-nav">
+        <h1>EXERCÍCIO #20</h1>
+        <h2>Disciplina de Algoritmos</h2>
+    </div>
+    <div class="box">
+        <p>4 - Faça um programa em javascript que calcule e mostre a quantidade de números pares e a quantidade de números ímpares entre Num1 e Num2, excluindo os extremos.</p>
+        
+        <input type="number" id='n1' placeholder="Olá, digite um numero">
+        <br><br> 
+        <input type="number" id='n2' placeholder="Olá, digite um numero">
+        <br><br> 
+       
+       
+        <button onclick="ParouImpar()">Verificar</button>
+    </div>
+
+
+</body>
+    <script>
+
+function ParouImpar() {
+    let n1 = Number(document.getElementById('n1').value);
+    let n2 = Number(document.getElementById('n2').value);
+    let pares = [];
+    let impares = [];
+
+    for (let i = n1 + 1; i < n2; i++) {
+        if (i % 2 === 0) {
+            pares.push(i);
+        } else {
+            impares.push(i);
+        }
+    }
+
+    alert(`Números pares: ${pares.join(', ')}`);
+    alert(`Números ímpares: ${impares.join(', ')}`);
+}
+        </script> 
+    </html>

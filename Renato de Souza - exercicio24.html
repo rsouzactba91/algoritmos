@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Prof Roger Bassan | 02</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+
+        }
+        .box-nav{
+            background-color: gold;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline:none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 50%;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-nav">
+        <h1>EXERCÍCIO #24</h1>
+        <h2>Disciplina de Algoritmos</h2>
+    </div>
+    <div class="box">
+        <p>Escreva uma função chamada inverterPalavras que receba uma string (frase) como parâmetro e retorne a frase com a ordem das palavras invertida.</p>
+        
+        <input type="text" id='p1' placeholder="Escreva algo">
+        <br><br> 
+              
+       
+        <button onclick="InverterPalavras()">Verificar</button>
+    </div>
+
+
+</body>
+    <script>
+
+function InverterPalavras(){
+
+
+ let p1 = document.getElementById('p1').value
+   
+let texto = p1.split('')
+ 
+texto = texto.reverse()
+texto = texto.join('')
+
+alert(texto)
+}
+        </script> 
+    </html>

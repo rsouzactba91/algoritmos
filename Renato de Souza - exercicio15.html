@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Prof Roger Bassan | 02</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+
+        }
+        .box-nav{
+            background-color: gold;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline:none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 50%;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-nav">
+        <h1>EXERCÍCIO #15</h1>
+        <h2>Disciplina de Algoritmos</h2>
+    </div>
+    <div class="box">
+        <p> 3 - Faça um programa em javascript que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato.</p>
+        
+        <input type="number" id='v1' placeholder="Digite o número">
+        <br><br> 
+        <input type="text" id='v2' placeholder="Digite o número">
+        <br><br> 
+        <input type="text" id='v3' placeholder="Digite o número">
+        <br><br>     
+        
+        <button onclick="maisbarato()">Verificar</button>
+    </div>
+
+
+</body>
+    <script>
+
+    function maisbarato() {
+        
+     
+    let n1 = Number(document.getElementById("v1").value);
+    let n2 = Number(document.getElementById("v2").value);
+    let n3 = Number(document.getElementById("v3").value);
+
+    if (n1 < n2 && n1 < n3) {
+        alert("O primeiro valor digitado é mais barato"+" "+n1);
+    } else if (n2 < n1 && n2 < n3) {
+        alert("O segundo valor digitado é mais barato"+" "+n2);
+    } else if (n3 < n1 && n3 < n2) {
+        alert("O terceiro valor é mais barato"+" "+n3);
+    } else {
+        alert("Os valores são iguais ou não há um único valor");
+    }
+
+}
+        </script> 
+    </html>
